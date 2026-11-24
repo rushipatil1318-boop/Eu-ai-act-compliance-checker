@@ -2,7 +2,7 @@
 
 ![tests](https://github.com/rushipatil1318-boop/eu-ai-act-compliance-checker/actions/workflows/ci.yml/badge.svg)
 
-**Live demo:** _paste your Streamlit link here after deploying_
+**Demo status:** Run locally using the instructions below. A public hosted demo is not currently documented.
 
 A small web app that helps students, startups and small teams find out **which risk level of the EU AI Act their AI system falls into** and **what they have to do about it**.
 
@@ -73,6 +73,11 @@ python -m venv .venv
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
 pip install -r requirements-dev.txt
 streamlit run app.py
+```
+
+To run the tests, stop the app with `Ctrl+C` or open a second terminal with the virtual environment activated:
+
+```bash
 pytest
 ```
 
@@ -88,7 +93,7 @@ Safety for public apps: each visitor gets 3 calls and the whole server is capped
 
 **Option A - Streamlit Community Cloud (free, easiest)**
 
-1. Push this repo to a *public* GitHub repository.
+1. Fork or clone this public repository into the GitHub account you will use for deployment.
 2. Go to share.streamlit.io and sign in with GitHub.
 3. Click **Create app**, choose your repo, branch `main` and main file `app.py`.
 4. Optional: **Advanced settings -> Secrets**, paste the content of `.streamlit/secrets.toml.example` with your real values.
